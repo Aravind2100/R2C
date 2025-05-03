@@ -1,138 +1,80 @@
 /* Global Container */
 #root {
-  max-width: 1280px;
+  max-width: 100%;
   margin: 0 auto;
-  padding: 2rem;
+  padding-top: 4rem; /* To avoid being hidden under fixed navbar */
   text-align: center;
-}
-
-/* Logo Styling */
-.logo {
-  height: 1.5em;
-  padding: 0.2em 0 0.2em 1em;
-  will-change: filter;
-  transition: filter 300ms;
-  color: aliceblue;
-}
-
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-/* Spinning Animation */
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
-/* Card Styling */
-.card {
-  padding: 2em;
-}
-
-/* Read The Docs Styling */
-.read-the-docs {
-  color: #888;
+  font-family: sans-serif;
 }
 
 /* Navbar Styles */
 .navbar {
-  top: 10px;
   position: fixed;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 90%;
-  max-width: 1000px;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100vw;
   display: flex;
-  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  padding: 0.75rem 1rem;
-  background-color: rgba(126, 126, 126, 0.23);
+  padding: 1rem 2rem;
+  background-color: rgba(0, 0, 0, 0.5);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
-  border-bottom-left-radius: 1rem;
-  border-bottom-right-radius: 1rem;
-  z-index: 999;
+  z-index: 1000;
+  box-sizing: border-box;
 }
 
-/* Navigation Links */
+/* Logo */
+.logo {
+  color: white;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+/* Nav Links */
 .nav-links {
   list-style: none;
   display: flex;
-  flex-wrap: wrap;
-  gap: 1.2rem;
+  gap: 2rem;
   margin: 0;
   padding: 0;
-  justify-content: flex-end;
-  flex: 1;
 }
 
 .nav-links-item a {
   color: white;
   text-decoration: none;
-  padding-bottom: 5px;
-  transition: color 0.3s ease, text-shadow 0.3s ease, letter-spacing 0.3s ease;
+  transition: 0.3s ease;
+  font-size: 1rem;
+  font-weight: 500;
 }
 
 .nav-links-item a:hover {
-  text-shadow: 0 0 8px rgba(150, 150, 150, 0.7);
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.7);
   letter-spacing: 2px;
 }
 
-/* ✨ Responsive Design Enhancements */
-
-/* Tablet & below */
+/* Responsive Styling */
 @media (max-width: 768px) {
   .navbar {
     flex-direction: column;
     align-items: flex-start;
-    width: 95%;
     padding: 1rem;
   }
 
   .nav-links {
     flex-direction: column;
     align-items: flex-start;
+    gap: 1rem;
+    margin-top: 0.5rem;
     width: 100%;
-    gap: 0.8rem;
   }
 
   .nav-links-item a {
-    font-size: 1rem;
-  }
-}
-
-/* Mobile devices */
-@media (max-width: 480px) {
-  .logo {
-    height: 1.2em;
-    padding-left: 0.5em;
-  }
-
-  .navbar {
-    padding: 0.8rem;
-  }
-
-  .nav-links-item a {
-    font-size: 0.9rem;
-  }
-
-  .card {
-    padding: 1em;
+    display: block;
+    width: 100%;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   }
 }
