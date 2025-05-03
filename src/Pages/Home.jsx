@@ -5,9 +5,9 @@ import "./Home.css";
 function Home() {
   return (
     <div className="home-container">
+      <ArrowRain count={20} />
       <ArrowRain count={10} />
-      <ArrowRain count={10} />
-      <ArrowRain count={10} />
+      <ArrowRain count={20} />
       <div className="top-section">
         <div className="left-section">
           <h1 className="typing-title">
