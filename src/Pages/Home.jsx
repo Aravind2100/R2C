@@ -38,11 +38,6 @@ function Home() {
         <p>This is footer section (Div 4)</p>
       </div>
     </div>
-
-    
-
-    
-    
   );
 }
 
