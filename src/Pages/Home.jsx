@@ -1,12 +1,11 @@
 import ArrowRain from "../../components/ArrowRain";
 import { Typewriter } from "react-simple-typewriter";
 import "./Home.css";
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
-import About from "./About.jsx";
+
 
 function Home() {
   return (
-    <Router>
+    
     <div className="home-container">
       <ArrowRain count={20} />
       <ArrowRain count={10} />
@@ -40,12 +39,10 @@ function Home() {
       </div>
     </div>
 
-    {}
-    <Routes>
-    <Route path="/" element={<About />} />
+    
 
-    </Routes>
-    </Router>
+    
+    
   );
 }
 
