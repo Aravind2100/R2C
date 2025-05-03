@@ -26,7 +26,7 @@ const ArrowRain = ({ count }) => {
         {
           x: endX,
           y: endY,
-          duration: 10,
+          duration: 5,
           delay: delay,
           repeat: -1,
           ease: 'none',
