@@ -4,6 +4,7 @@ import "./Home.css";
 
 function Home() {
   return (
+    <Router>
     <div className="home-container">
       <ArrowRain count={20} />
       <ArrowRain count={10} />
@@ -36,6 +37,12 @@ function Home() {
         <p>This is footer section (Div 4)</p>
       </div>
     </div>
+
+    <Routes>
+    <Route path="/" element={<About />} />
+
+    </Routes>
+    </Router>
   );
 }
 

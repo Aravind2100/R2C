@@ -2,7 +2,7 @@
 #root {
   max-width: 100%;
   margin: 0 auto;
-  padding-top: 4rem; /* To avoid being hidden under fixed navbar */
+  padding-top: 10rem; /* To avoid being hidden under fixed navbar */
   text-align: center;
 
 }
