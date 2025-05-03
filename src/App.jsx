@@ -4,12 +4,13 @@ import ArrowRain from '../components/ArrowRain';
 import Home from './pages/Home';
 import About from './pages/About';
 import Contact from './pages/Contact';
+import Navbar from '../components/NavBar';
 
 function App() {
   return (
     <Router>
       
-      <div className="navbar">
+      {/* <div className="navbar">
         <h2 className="logo">R2C</h2>
         <ul className="nav-links">
           <li className="nav-links-item">
@@ -22,7 +23,9 @@ function App() {
             <Link to="/contact">Contact</Link>
           </li>
         </ul>
-      </div>
+      </div> */}
+
+      <Navbar />
 
       {/* Route Content */}
       <Routes>

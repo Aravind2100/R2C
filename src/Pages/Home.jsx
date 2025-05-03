@@ -1,6 +1,8 @@
 import ArrowRain from "../../components/ArrowRain";
 import { Typewriter } from "react-simple-typewriter";
 import "./Home.css";
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import About from "./About.jsx";
 
 function Home() {
   return (
@@ -38,6 +40,7 @@ function Home() {
       </div>
     </div>
 
+    {}
     <Routes>
     <Route path="/" element={<About />} />
 
