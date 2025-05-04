@@ -1,10 +1,11 @@
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import './App.css';
 import ArrowRain from '../components/ArrowRain';
-import Home from './pages/Home';
+
 import About from './pages/About';
 import Contact from './pages/Contact';
 import Navbar from '../components/NavBar';
+import Home from './Pages/Home';
 
 function App() {
   return (

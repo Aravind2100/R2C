@@ -36,7 +36,7 @@ const ArrowRain = ({ count }) => {
   }, []);
 
   const arrows = Array.from({ length: count }, (_, i) => (
-    <div key={i} className="arrow">R 2 C</div>
+    <div key={i} className="arrow">#</div>
   ));
 
   return (
