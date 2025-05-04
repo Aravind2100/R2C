@@ -25,14 +25,99 @@ a:hover {
   color: #535bf2;
 }
 
+/* Modern animated gradient background */
+/* Modern animated wavy background */
 body {
   margin: 0;
   display: flex;
+  flex-direction: column;  /* Ensures content grows vertically */
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
-  background-image: linear-gradient( 180.4deg,  rgba(0,6,10,1) 1%, rgba(1,190,237,1) 91.4% );;
+  background: linear-gradient(90deg,#1a1a1a, #005f73, #0a9396, #94d2bd);
+  background-size: 400% 400%;
+  animation: gradientBG 15s ease infinite;
+  position: relative;
+  overflow-x: hidden;  /* Prevent horizontal overflow */
 }
+
+main {
+  width: 100%;  /* Make sure main content takes up the full width */
+  padding: 20px;
+  flex-grow: 1;  /* Allows content to expand and fill the available space */
+}
+
+/* Gradient animation for background */
+@keyframes gradientBG {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Wavy background using pseudo-element */
+body::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 150px;  /* Control wave height */
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  transform: translateY(-50%);
+  animation: waveAnim 8s infinite ease-in-out;
+  z-index: -1;
+}
+
+/* Wavy animation keyframes */
+@keyframes waveAnim {
+  0% {
+    transform: translateY(-50%) scaleX(1.2);
+  }
+  50% {
+    transform: translateY(-40%) scaleX(1.1);
+  }
+  100% {
+    transform: translateY(-50%) scaleX(1.2);
+  }
+}
+
+
+
+
+/* Glowing particle dots */
+.particle {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  box-shadow: 0 0 12px 4px rgba(255, 255, 255, 0.15);
+  animation: float 6s ease-in-out infinite;
+}
+
+/* Particle float animation */
+@keyframes float {
+  0% {
+    transform: translateY(0) scale(1);
+    opacity: 0.8;
+  }
+  50% {
+    transform: translateY(-50px) scale(1.2);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(0) scale(1);
+    opacity: 0.8;
+  }
+}
+
 
 h1 {
   font-size: 3.2em;
@@ -70,3 +155,47 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+
+.wave-container {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.wave {
+  position: absolute;
+  bottom: 0;
+  width: 200%;
+  height: 100%;
+  background: rgba(1, 190, 237, 0.4);
+  opacity: 0.6;
+  border-radius: 100% 50%;
+  animation: waveAnim 8s linear infinite;
+}
+
+.wave1 {
+  animation-delay: 0s;
+}
+
+.wave2 {
+  background: rgba(1, 190, 237, 0.2);
+  animation-delay: 4s;
+  animation-duration: 12s;
+}
+
+@keyframes waveAnim {
+  0% {
+    transform: translateX(0) translateY(0);
+  }
+  50% {
+    transform: translateX(-25%) translateY(15px);
+  }
+  100% {
+    transform: translateX(-50%) translateY(0);
+  }
+}
+
